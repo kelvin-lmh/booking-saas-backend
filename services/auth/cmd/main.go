@@ -11,7 +11,6 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/register", func(c *gin.Context) {
-		// demo, sau sẽ gọi logic thật
 		c.JSON(200, gin.H{"message": "registered"})
 	})
 
