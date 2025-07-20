@@ -1,0 +1,6 @@
+CREATE DATABASE auth;
+
+CREATE DATABASE booking;
+
+CREATE DATABASE payment;
+

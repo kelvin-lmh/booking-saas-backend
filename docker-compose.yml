@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  auth:
+    build: ./services/auth
+    container_name: auth
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./.env
+    depends_on:
+      - postgres
+    networks:
+      - booking-net
+
+networks:
+  booking-net:
+    driver: bridge
