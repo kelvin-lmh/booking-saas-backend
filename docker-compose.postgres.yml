@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:14
+    container_name: booking-postgres
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - booking-net
+
+networks:
+  booking-net:
+    driver: bridge
